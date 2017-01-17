@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+html {
+  font-size: 12px;
+}
+
+body {
+  min-height: 100vh;
+  background: #7C17E8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: "Lato", sans-serif;
+}
+
+.main-form {
+  position: relative;
+  top: 150px;
+}
+
+.search {
+  border: 5px solid #ddd;
+  border-radius: 5px;
+  width: 400px;
+  padding: 15px 10px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0px 10px 8px -8px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.search:focus {
+  background: #fff;
+  outline: #fff;
+}
+
+.items {
+  position: relative;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 15px 10px;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  color: #444;
+  text-transform: uppercase;
+}
+
+.highlight {
+  background: #7C17E8;
+  color: #fff;
+}
+.item:nth-child(even) {
+  -webkit-transform: perspective(100px) rotateX(3deg) scale(1.001) translateY(-0.3px);
+          transform: perspective(100px) rotateX(3deg) scale(1.001) translateY(-0.3px);
+  background: -webkit-linear-gradient(top, #ffffff, #efefef);
+  background: linear-gradient(to bottom, #ffffff, #efefef);
+}
+.item:nth-child(odd) {
+  -webkit-transform: perspective(100px) rotateX(-3deg) translateY(0.3px);
+          transform: perspective(100px) rotateX(-3deg) translateY(0.3px);
+  background: -webkit-linear-gradient(bottom, #ffffff, #efefef);
+  background: linear-gradient(to top, #ffffff, #efefef);
+}
